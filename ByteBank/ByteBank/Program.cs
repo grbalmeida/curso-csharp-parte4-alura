@@ -6,7 +6,19 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(545, 788545);
+            try
+            {
+                ContaCorrente conta = new ContaCorrente(514, 5640);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadLine();
         }
