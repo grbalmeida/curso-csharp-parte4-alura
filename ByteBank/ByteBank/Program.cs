@@ -6,20 +6,7 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Metodo();
-            }
-            catch(DivideByZeroException e)
-            {
-                Console.WriteLine("Não é possível divisão por zero.");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.StackTrace);
-                Console.WriteLine("Aconteceu um erro!");
-            }
+            ContaCorrente conta = new ContaCorrente(545, 788545);
 
             Console.ReadLine();
         }
