@@ -9,11 +9,9 @@ namespace ByteBank
             try
             {
                 ContaCorrente conta = new ContaCorrente(456, 4578420);
+                ContaCorrente conta2 = new ContaCorrente(485, 456478);
 
-                conta.Depositar(50);
-
-                Console.WriteLine(conta.Saldo);
-                conta.Sacar(500);
+                conta2.Transferir(-10, conta);
             }
             catch (ArgumentException ex)
             {
